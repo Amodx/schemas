@@ -28,7 +28,7 @@ export type RegisteredInput<
   ): PropertyFC<Value, PropertyInputBase<Value, Properties>>;
   createPropertyRenderFC<
     RenderedData extends any = any,
-    Props extends any = any,
+    Props extends {} = {},
   >(
     fc: (
       props: {

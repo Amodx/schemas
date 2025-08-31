@@ -11,6 +11,7 @@ import {
   Vec2PropertyInput,
   Vec3PropertyInput,
   BooleanPropertyInput,
+  ButtonPropertyInput,
 } from "./Inputs/DefaultInputs";
 import { ObjectPath } from "./Properties/ObjectPath";
 import { Property } from "./Properties/Property";
@@ -51,6 +52,7 @@ export const AnyProp: PropertyFC<any, any> = (id, data = {}) => {
 };
 
 export const StringProp = StringPropertyInput.createPropertyFC("");
+export const ButtonProp = ButtonPropertyInput.createPropertyFC(() => {});
 export const FloatProp = FloatPropertyInput.createPropertyFC(0);
 export const IntProp = IntPropertyInput.createPropertyFC(0);
 export const RangeProp = RangePropertyInput.createPropertyFC(0);

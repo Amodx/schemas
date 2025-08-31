@@ -14,6 +14,20 @@ const StringInput = registerInput<string, { min: number; max: number }>({
     };
   },
 });
+
+const ButtonInput = registerInput<Function, {} >({
+  id: "button",
+  name: "Button",
+  compare(value1, value2) {
+    return value1 == value2;
+  },
+  createProperties(properties) {
+    return {
+      ...properties,
+    };
+  },
+});
+
 const HEXColorInput = registerInput<string, {}>({
   id: "hex-color",
   name: "Hex Color",
@@ -26,6 +40,7 @@ const HEXColorInput = registerInput<string, {}>({
     };
   },
 });
+
 const Color3Input = registerInput<{ r: number; g: number; b: number }, {}>({
   id: "color3",
   name: "Color3",
@@ -176,6 +191,7 @@ const BooleanInput = registerInput<boolean, {}>({
 });
 
 export {
+  ButtonInput as ButtonPropertyInput,
   HEXColorInput as HexColorPropertyInput,
   Color3Input as Color3PropertyInput,
   Color4Input as Color4PropertyInput,
